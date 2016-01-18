@@ -5,25 +5,75 @@
 @syntax-brightness:   18%;
 
 
-// Monochrome -----------------------------------
-@mono-1: hsl(@syntax-hue, 14%, 71%); // default text
-@mono-2: hsl(@syntax-hue,  9%, 55%);
-@mono-3: hsl(@syntax-hue, 10%, 40%);
+// Monochrome -------------------------------
+@mono-1: #73787d; // </>
+@mono-2: blue;
+@mono-3: #83df1c; // <!-- -->
+
+
+
+
+// CSS Colors -------------------------------
+@css_comment:   #81cc6e;
+@css_selector:  #e573e4;
+@css_puncuate:  #c9cc6e;
+@css_class-id:  #e573e4;
+@css_pseudo:	#c9cc6e;
+@css_property:  #73b2e5;
+@css_value:		#abb2bf;
+@css_string:	#81cc6e;
+@css_media:     #cfd7e5;
+
+
+
+
+// HTML Colors -------------------------------
+@html_text:      #7a7d80;
+@html_comment:   #81cc6e;
+@html_tag:       #73b2e5;
+@html_attr:      #e57373;
+@html_value:     #abb2bf;
+@html_puncuate:  #7a7d80;
+
+
+
+// JavaScript Colors ------------------------
+
+@js_comment: 	#e067b2;
+
+@js_func:       #73b2e5;
+@js_func-name:  #e5aa65;
+
+@js_syntax:     #abb2bf;
+@js_etc:    	#7a7d80;
+
+@js_var:        #73b2e5;
+@js_string:     #77bd66;
+@js_number:     #c9cc6e;
+@js_boolean:    #e57c7c;
+@js_reserved:   #9474d6;
+
+@js_object:     #cc9c66;
+@js_property:   @js_syntax;
+
+@js_logic:      #73b2e5;
+
 
 // Colors -----------------------------------
-@hue-1:   hsl(187, 47%, 55%); // <-cyan
-@hue-2:   hsl(207, 82%, 66%); // <-blue
-@hue-3:   hsl(286, 60%, 67%); // <-purple
-@hue-4:   hsl( 95, 38%, 62%); // <-green
-
-@hue-5:   hsl(355, 65%, 65%); // <-red 1
-@hue-5-2: hsl(  5, 48%, 51%); // <-red 2
-
-@hue-6:   hsl( 29, 54%, 61%); // <-orange 1
-@hue-6-2: hsl( 39, 67%, 69%); // <-orange 2
+@hue-1:   #7f91ff; // echo
+@hue-2:   #ff6f6f; // id=
+@hue-3:   #7fc96c; // string
+@hue-4:   #c7c7c7; // "content"
 
 
-// Base colors -----------------------------------
+@hue-5:   #85c1fe; // <div>
+@hue-5-2: #dbff00; // <?
+
+@hue-6:   #ff6f6f; // class=
+@hue-6-2: white; // <-orange 2
+
+
+// Base colors -------------------------------
 @syntax-fg:     @mono-1;
 @syntax-bg:     hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
 @syntax-gutter: darken(@syntax-fg, 26%);
