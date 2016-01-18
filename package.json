@@ -4,6 +4,8 @@
   "version": "0.0.9",
   "description": "Szakara syntax theme",
   "keywords": [
+    "atom",
+    "theme",
     "dark",
     "blue",
     "syntax"
