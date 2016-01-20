@@ -12,40 +12,67 @@
   &.js{
 
 
-    color: @js_syntax;
+    color: @js_blue;
 
 
     // Comments.
     span.comment{
-      color: @js_comment;
+      color: @js_pink;
       font-style: italic;
 
       &.definition{
-        color: @js_comment;
+        color: @js_pink;
       }
 
     }
 
 
-    // Declarations (var, function, this).
+    // Declarations (var, function).
     span.storage.var,
-    span.storage.function,
-    span.variable.language{
-      color: @js_var;
-    }
-    span.constant.language{
-      color: @js_reserved;
+    span.storage.function{
+      color: @js_source;
       font-style: italic;
     }
-    span.constant.language.boolean{
-      color: @js_boolean;
+    span.meta.method-call{
+      color: @js_white;
+    }
+   
+
+
+    // Function literals.
+    span.support.class,
+    span.entity.instance{
+      color: @js_blue;
+    }
+    span.entity.function{
+      color: @js_orange;
+    }
+
+    span.support.function,
+    span.support.constant{
+      color: @js_purple;
+    }
+    span.support.class{
       font-style: normal;
+    }
+
+
+    // Variables.
+    span.variable.object,
+    span.variable.parameter.function{
+      color: @js_blue;
+    }
+
+
+    // Constants.
+    span.constant.language{
+      color: @js_pink;
     }
     
 
     // Strings.
     span.string{
-      color: @js_string;
+      color: @js_green;
     }
 
 
@@ -56,8 +83,8 @@
 
 
     // Booleans.
-    span.boolean{
-      color: @js_boolean;
+    span.constant.language.boolean{
+      color: @js_red;
     }
 
 
@@ -65,11 +92,11 @@
     span.brace,
     span.arguments,
     span.terminator{
-      color: @js_syntax;
+      color: @js_source;
     }
     span.operator,
     span.curly,{
-      color: @js_etc;
+      color: @js_source;
     }
     span.keyword.operator.new{
       color: @js_var;
@@ -79,21 +106,32 @@
     }
 
 
-    // Functions
-    span.support.class,
-    span.entity.function,
-    span.entity.instance{
-      color: @js_func-name;
+    // Parameters.
+    span.parameters.begin,
+    span.parameters.end{
+      color: @js_source;
     }
-    span.support.function,
-    span.support.constant{
-      color: @js_reserved;
+  
+
+
+    // Delimiters.
+    span.meta.delimiter,
+    span.meta.brace,
+    span.arguments.begin,
+    span.arguments.end{
+      color: @js_source;
+    }
+
+
+    // Properties.
+    span.variable.property{
+      color: @js_white;
     }
 
 
     // Logic.
     span.keyword.control{
-      color: @js_logic;
+      color: @js_red;
     }
 
 
@@ -214,3 +252,63 @@
 }
 
 
+
+
+  /*-----*/
+ /* PHP */
+/*-----*/
+
+.html.php{
+  /* color: @php_base; */
+}
+
+// Tags.
+.embedded.begin.php,
+.embedded.end.php{
+  color: @php_tag;
+}
+
+// Variable.
+.variable.php{
+  color: @php_var;
+}
+.storage.modifier.php{
+  color: @php_keyword;
+}
+
+// Function.
+.storage.function.php{
+  color: @php_func-dec;
+}
+.entity.function.php,
+.function-call.php{
+  color: @php_func;
+  font-style: italic;
+}
+.support.php{
+  color: @php_base;
+}
+
+// Logic.
+.control.php{
+  color: @php_logic;
+}
+
+// Output ('echo').
+.function.output.php{
+  color: @php_out;
+}
+
+// Strings.
+.string.quoted.php span{
+  color: @php_string;
+}
+
+// Constants, booleans.
+.keyword.language.php{
+  color: @php_keyword;
+}
+
+.constant.php{
+  color: @php_boolean;
+}
